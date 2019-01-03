@@ -1,11 +1,11 @@
 {
-  "name": "example-create-react-app-express",
+  "name": "kickstart-js",
   "version": "1.0.0",
   "description": "Example on using create-react-app with a Node Express Backend",
   "author": {
-    "name": "Esau Silva",
-    "twitter": "@_esausilva",
-    "url": "https://esausilva.com"
+    "name": "Katie Boyd",
+    "twitter": "@katrilllion",
+    "url": "https://jobs.nike.com/category/technology-jobs/15675/29758/1"
   },
   "license": "MIT",
   "scripts": {

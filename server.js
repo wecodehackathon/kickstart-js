@@ -8,16 +8,22 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// To Do List / Faux data store
+let toDoList = [
+  'Create an awesome hackathon project!',
+  'Don\'t forget to take a break'
+];
+
 // API calls
 app.get('/api/hello', (req, res) => {
-  res.send({ express: 'Hello From Express' });
+  res.send({ toDoList });
 });
 
-app.post('/api/world', (req, res) => {
+app.post('/api/addItem', (req, res) => {
+  // displays in the terminal
   console.log(req.body);
-  res.send(
-    `I received your POST request. This is what you sent me: ${req.body.post}`,
-  );
+  toDoList.push(req.body.post);
+  res.send('Item added!');
 });
 
 if (process.env.NODE_ENV === 'production') {

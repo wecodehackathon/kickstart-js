@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-
-import logo from './logo.svg';
-
 import './App.css';
 
 class App extends Component {
   state = {
-    response: '',
+    list: '',
     post: '',
-    responseToPost: '',
+    responseToPost: ''
   };
 
   componentDidMount() {
+    this.updateTodoList();
+  }
+
+  updateTodoList() {
     this.callApi()
-      .then(res => this.setState({ response: res.express }))
+      .then(res => this.setState({ list: res.toDoList }))
       .catch(err => console.log(err));
   }
 
@@ -28,36 +29,32 @@ class App extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
-    const response = await fetch('/api/world', {
+    const response = await fetch('/api/addItem', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ post: this.state.post }),
+      body: JSON.stringify({ post: this.state.post })
     });
-    const body = await response.text();
+    const body = await response.text()
+     .then(this.updateTodoList());
 
-    this.setState({ responseToPost: body });
+    this.setState({ responseToPost: body, post: '' });
   };
 
   render() {
+    console.log(this.state.response);
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <h1>To Do List</h1>
         </header>
-        <p>{this.state.response}</p>
+        <ul class="to-do-list">
+       {this.state.list.length > 0 && this.state.list.map((listItem, index) => (
+          <li>{listItem}</li>
+        ))}
+          
+        </ul>
         <form onSubmit={this.handleSubmit}>
           <p>
             <strong>Post to Server:</strong>
@@ -67,7 +64,7 @@ class App extends Component {
             value={this.state.post}
             onChange={e => this.setState({ post: e.target.value })}
           />
-          <button type="submit">Submit</button>
+          <button class="submit-button" type="submit">Submit</button>
         </form>
         <p>{this.state.responseToPost}</p>
       </div>
