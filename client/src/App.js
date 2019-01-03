@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ListItem from './ListItem.js';
 
 class App extends Component {
   state = {
@@ -49,9 +50,9 @@ class App extends Component {
         <header className="App-header">
           <h1>To Do List</h1>
         </header>
-        <ul class="to-do-list">
+        <ul className="to-do-list">
        {this.state.list.length > 0 && this.state.list.map((listItem, index) => (
-          <li>{listItem}</li>
+          <ListItem text={listItem} />
         ))}
           
         </ul>
@@ -64,7 +65,7 @@ class App extends Component {
             value={this.state.post}
             onChange={e => this.setState({ post: e.target.value })}
           />
-          <button class="submit-button" type="submit">Submit</button>
+          <button className="submit-button" type="submit">Submit</button>
         </form>
         <p>{this.state.responseToPost}</p>
       </div>
