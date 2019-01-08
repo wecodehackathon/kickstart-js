@@ -1,6 +1,6 @@
 # About the App
 
-Here is a (hopefully) quick way to start your hackathon project with a simple node server and React app, ready for your UI enhancements and/or database connections. It's a To Do list, in which you can add a To Do item via the form field, and it will be posted to the Express server.
+Here is a quick way to start your hackathon project with a simple node server and React app, ready for your UI enhancements and/or database connections. It's a To Do list, in which you can add a To Do item via the form field, and it will be posted to the Express server.
 
 You can mark a To Do item as done by checking the box next to it.
 
@@ -10,15 +10,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 If you don't already have these tools, download and install them before you start working with the Apparel Store app.
 
-* Modern web browser (may we suggest [Chrome?](https://www.google.com/chrome/browser))
-* Command Line Interface (CLI)
-  * Mac OSX: Terminal is already installed, or try [iTerm](https://www.iterm2.com/)
-  * Windows: Command Prompt (DOS) or [Git Bash](https://gitforwindows.org/)
-* [Node.js](https://nodejs.org/download/) 
-* [Yarn Package Manager](https://yarnpkg.com/lang/en/docs/install/)
-* A text editor or coding tool of your choice. [VS Code](https://code.visualstudio.com/) is available for free for Mac and Windows. 
+- Modern web browser (may we suggest [Chrome?](https://www.google.com/chrome/browser))
+- Command Line Interface (CLI)
+  - Mac OSX: Terminal is already installed, or try [iTerm](https://www.iterm2.com/)
+  - Windows: Command Prompt (DOS) or [Git Bash](https://gitforwindows.org/)
+- [Node.js](https://nodejs.org/download/)
+- [Yarn Package Manager](https://yarnpkg.com/lang/en/docs/install/)
+- A text editor or coding tool of your choice. [VS Code](https://code.visualstudio.com/) is available for free for Mac and Windows.
 
 ## Getting Started
+
+First, fork this repo: https://guides.github.com/activities/forking/. Just log into your Github account, and then hit Fork (next to the Watch and Star buttons on the top right), and then clone from your own fork of the repo.
 
 Once you have all prerequisites installed, open your CLI and navigate to the project folder.
 
@@ -30,7 +32,7 @@ cd /Users/mycomp/Documents/kickstart-js
 
 Press return, and you'll be taken to that folder.
 
-Install [nodemon](https://github.com/remy/nodemon) globally
+Install [nodemon](https://github.com/remy/nodemon) globally. (Debug hint: run this even if you think you have nodemon.)
 
 ```
 npm i nodemon -g
@@ -44,7 +46,6 @@ cd client
 yarn
 ```
 
-
 For local development, start the server and client at the same time (from the root of the project)
 
 ```
@@ -53,14 +54,52 @@ yarn dev
 
 Navigate to http://localhost:3000/ and try adding an item to your To Do list
 
-To stop serving the page to your browser, press Control+C in the CLI.
+To stop serving the page to your browser, press Control+C in the command line.
 
-## How this works
-
-The key to use an Express backend with a project created with `create-react-app` is on using a **proxy**. We have a _proxy_ entry in `client/package.json`
+## Project Structure
 
 ```
-"proxy": "http://localhost:5000/"
+kickstart-js
+├── README.md
+├── package.json
+├── LICENSE
+├── .gitignore
+├── server.js
+├── yarn.lock
+└── client
+    ├─── src
+    │   ├── App.css
+    │   ├── App.js
+    │   ├── App.test.js
+    |   ├── ListItem.css
+    │   ├── ListItem.js
+    │   ├── index.css
+    │   ├── index.js
+    │   ├── logo.svg
+    │   └── serviceWorker.js
+    ├── public
+    │   ├── favicon.ico
+    │   ├── index.html
+    │   └── manifest.json
+    ├── package.json
+    ├── yarn.lock
+    └── .env
 ```
 
-This tells Webpack development server to proxy our API requests to our API server, given that our Express server is running on **localhost:5000**
+Some file basics:
+
+- App.js: app logic
+- App.css: app styling
+- ListItem.js: a smart React component (includes state)
+- ListItem.css: the styling for this React component
+
+## Resources
+
+Git: Forking a Repo: https://guides.github.com/activities/forking/
+React: https://reactjs.org/docs/getting-started.html
+CSS via Mozilla: https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS
+CSS-Tricks: https://css-tricks.com/snippets/
+Color Palettes: http://colormind.io/
+Color Palette Generator: https://www.canva.com/color-palette/
+Google Fonts: https://fonts.google.com/
+Font Pairings: https://www.typewolf.com/google-fonts
