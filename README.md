@@ -1,3 +1,5 @@
+# THIS IS AN OPTIONAL STARTER-KIT. USE WHICHEVER LANGUAGES AND FRAMEWORKS MAKES YOUR <3 GO BOOP!
+
 # About the App
 
 Here is a quick way to start your hackathon project with a simple node server and React app, ready for your UI enhancements and/or database connections. It's a To Do list, in which you can add a To Do item via the form field, and it will be posted to the Express server.
