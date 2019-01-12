@@ -1,6 +1,10 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const config = require('./server/config');
 const path = require('path');
 const bodyParser = require('body-parser');
+
+mongoose.connect(config.mongoUri)
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -35,5 +39,8 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
   });
 }
+
+require('./server/routes/user')(app)
+require('./server/routes/produce')(app)
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
