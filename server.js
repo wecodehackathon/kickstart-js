@@ -11,15 +11,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // API calls
-app.get('/api/hello', (req, res) => {
+app.get('/api/map', (req, res) => {
   res.send('hello');
 });
 
 app.post('/api/addItem', (req, res) => {
   // displays in the terminal
-  console.log(req.body);
-  toDoList.push(req.body.post);
+  console.log('adding Item', req.body);
+  // toDoList.push(req.body.post);
   res.send('Item added!');
+});
+
+app.get('/api/getMeetups', (req, res) => {
+  console.log('getting meetups', req.body);
 });
 
 if (process.env.NODE_ENV === 'production') {
