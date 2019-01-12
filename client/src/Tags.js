@@ -69,7 +69,9 @@ class Tags extends React.Component {
                     handleDelete={this.handleDelete}
                     handleAddition={this.handleAddition}
                     handleDrag={this.handleDrag}
-                    delimiters={delimiters} />
+                    delimiters={delimiters}
+                    inline={false} 
+                    />
             </div>
         )
     }

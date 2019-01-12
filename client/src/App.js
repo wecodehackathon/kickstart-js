@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import ListItem from './ListItem.js';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import SubmitForm from './SubmitForm';
+import SubmitForm from './SubmitForm.js';
+import Header from './Header.js';
 
 class App extends Component {
   state = {
@@ -51,7 +52,7 @@ class App extends Component {
       <Router>
       <div className="App">
         <header className="App-header">
-          
+          <Header/>
         </header>
         <Switch>
         <Route exact path="/form" component={SubmitForm}/>
