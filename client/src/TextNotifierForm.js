@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/lib/Button';
 import FormGroup from 'react-bootstrap/lib/FormGroup';
 import ControlLabel from 'react-bootstrap/lib/ControlLabel';
 import FormControl from 'react-bootstrap/lib/FormControl';
 import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 import Checkbox from 'react-bootstrap/lib/Checkbox';
-
-// import './App.css';
-
+import schoolProgramData from './classes.json';
 
 function FieldGroup({ id, label, help, ...props }) {
     return (
@@ -19,74 +18,75 @@ function FieldGroup({ id, label, help, ...props }) {
     );
   }
 
-
+function getData (schoolProgramData) {
+    const schoolData = {};
+    schoolProgramData.forEach(schoolProgram => {
+        const school = Object.keys(schoolProgram)[0];
+        schoolData[school] = schoolProgram[school]
+    });
+    return schoolData
+}
 class TextNotifierForm extends Component {
+    constructor(props) {
+        super(props);
+        this.schoolData = getData(schoolProgramData);
+    } 
+    state = {
+        phone: '',
+        school: '',
+        programs: [],
+        formIsInvalid: true,
+    };
 
-  state = { 
-      phone: '',
-      school: '',
-      programs: [],
-  };
+    schools = schoolProgramData.map(schoolProgram => Object.keys(schoolProgram)[0]);
 
-  renderPhoneTextField = () => {
-    return (<div>enter phone#</div>)
-  }
-  renderSchoolDropdown = () => {
-    return (<div>choose your school: </div>)
-  }
-  renderPrograms = () => {
-    return (<div>choose your program: </div>)
-  }
   showThankYouPage = () => {
       alert('go to the thank you page.')
   }
-  handleSubmit = () => {
+  handleSubmit = async e => {
+      e.preventDefault();
     console.log('this is the state of things when we submit: ', this.state)
-    // const response = await fetch('https://dbasak1sjk.execute-api.us-west-2.amazonaws.com/development/submit', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(this.state)
-    // });
+    const response = await fetch('https://dbasak1sjk.execute-api.us-west-2.amazonaws.com/development/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+          phone: this.state.phone,
+          school: this.state.school,
+          programs: this.state.programs,
+      })
+    });
 
-    // const body = await response.text()
-    //  .then(this.showThankYouPage());
+    const body = await response.text()
+     .then(this.props.showThankYouPage());
   }
   renderSubmitButton = () => {
     return (
     <div>
+        {/* <Button disabled={this.state.formIsInvalid} onClick={this.handleSubmit}>Sign Me Up!</Button> */}
         <Button onClick={this.handleSubmit}>Sign Me Up!</Button>
     </div>)
   }
 
   handlePhoneNumber = phoneNumber => {
-      this.setState({ phone: phoneNumber });
-      console.log("pn???", this.textInput.value)
+      this.setState({ phone: this.textInput.value });
   }
   handleSchoolSelection = e => {
-      console.log('yes this is school seleciton change!!!!', e.target.value)
       this.setState({ school: e.target.value })
   }
   handleProgramSelection = program => {
       const selectedPrograms = this.state.programs;
       selectedPrograms.push(program);
       this.setState({ programs: selectedPrograms });
-      console.log('this is the state of thigns; ', this.state)
   }
   renderPrograms = () => {
-    const programs = [{
-        name: 'program 1',
-    }, {
-        name: 'program 2',
-    }];
-
       if (this.state.school !== '') {
         return (
             <div>
                 <ControlLabel>Choose your program:</ControlLabel>
                 <FormGroup>
-                    {programs.map(program => (
+                    {this.schoolData[this.state.school].map(program => (
                         <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>
                     ))}
                 </FormGroup>
@@ -96,7 +96,6 @@ class TextNotifierForm extends Component {
       return null;
   }
   renderFormElements = () => {
-      const schools = { 'school1': [], 'school2': [], 'school3': [] };
       const formInstance = (
         <form>
           <FieldGroup
@@ -111,7 +110,7 @@ class TextNotifierForm extends Component {
             <ControlLabel>Choose your school:</ControlLabel>
             <FormControl componentClass="select" placeholder="select" onChange={this.handleSchoolSelection}>
                 <option value="">[ Select School ]</option>
-                {Object.keys(schools).map(school => (
+                {this.schools.map(school => (
                     <option value={school}>{school}</option>
                 ))}
             </FormControl>
@@ -132,5 +131,9 @@ class TextNotifierForm extends Component {
     </div>);
   }
 }
+TextNotifierForm.propTypes = {
+    showThankYouPage: PropTypes.func
+  };
+
 
 export default TextNotifierForm;
