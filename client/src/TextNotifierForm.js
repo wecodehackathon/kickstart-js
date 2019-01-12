@@ -26,6 +26,8 @@ class TextNotifierForm extends Component {
       phone: '',
       school: '',
       programs: [],
+      isPhoneValid:false,
+      isSchoolValid: false,
   };
 
   renderPhoneTextField = () => {
@@ -40,8 +42,15 @@ class TextNotifierForm extends Component {
   showThankYouPage = () => {
       alert('go to the thank you page.')
   }
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    console.log('e', e)
     console.log('this is the state of things when we submit: ', this.state)
+    console.log("this.phoneno", this.textInput)
+    if (this.state.isPhoneValid && this.state.isSchoolValid){
+        alert('it workks')
+    }else{
+        alert('Invalid phone number or school')
+    }
     // const response = await fetch('https://dbasak1sjk.execute-api.us-west-2.amazonaws.com/development/submit', {
     //   method: 'POST',
     //   headers: {
@@ -61,12 +70,18 @@ class TextNotifierForm extends Component {
   }
 
   handlePhoneNumber = phoneNumber => {
-      this.setState({ phone: phoneNumber });
       console.log("pn???", this.textInput.value)
+      if (/^\d{10}$/.test(this.textInput.value)){
+          this.setState({ phone: this.textInput.value });
+          this.setState({isPhoneValid: true});
+      }
   }
   handleSchoolSelection = e => {
       console.log('yes this is school seleciton change!!!!', e.target.value)
-      this.setState({ school: e.target.value })
+      if (e.target.value){
+          this.setState({ school: e.target.value });
+          this.setState({ isSchoolValid: true})
+      }
   }
   handleProgramSelection = program => {
       const selectedPrograms = this.state.programs;
@@ -106,6 +121,7 @@ class TextNotifierForm extends Component {
             placeholder="Enter your phone number"
             inputRef={input => this.textInput = input}
             onChange={this.handlePhoneNumber}
+            
           />
            <FormGroup controlId="schoolSelect">
             <ControlLabel>Choose your school:</ControlLabel>
