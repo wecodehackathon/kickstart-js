@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ListItem from './ListItem.js';
+import Header from './Header';
 
 class App extends Component {
   state = {
@@ -47,9 +48,7 @@ class App extends Component {
     console.log(this.state.response);
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>To Do List</h1>
-        </header>
+        <Header />
         <ul className="to-do-list">
        {this.state.list.length > 0 && this.state.list.map((listItem, index) => (
           <ListItem text={listItem} />
