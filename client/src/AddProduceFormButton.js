@@ -10,7 +10,7 @@ class AddProduceFormButton extends Component {
   render() {
     return (
       <div>
-        <div onClick={this.props.onAddProduceForm}>(produce icon) +</div>
+        <button className="addButton" onClick={this.props.onAddProduceForm}>(produce icon) +</button>
       </div>
     );
   }

@@ -1,10 +1,57 @@
 .App {
   text-align: center;
+  font-family: 'Sarabun', sans-serif;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
+}
+
+.landingPage{
+  height: 500px;
+}
+
+.landingPageTitle{
+  margin-top: 50px;
+  font-size: 1.5rem;
+}
+
+.landingPageLogo {
+  margin-top: 20px;
+  transform: scale(.5);
+}
+.addButton {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: 1px solid grey;
+}
+.produceForm {
+  position: fixed;
+  top: 10vh;
+  right: 5vw;
+  height: 80vh;
+  width: 90vw;
+  background-color: whitesmoke;
+}
+.produceDetail {
+  position: fixed;
+  top: 10vh;
+  right: 5vw;
+  height: 80vh;
+  width: 90vw;
+  background-color: whitesmoke;
+}
+.produceDetailImage {
+  width: 100%;
+  margin-top: 30px;
+}
+.closeIconContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.closeIcon {
+  transform: scale(1.5);
 }
 
 .App-header {
