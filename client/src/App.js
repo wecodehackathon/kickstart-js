@@ -4,6 +4,10 @@ import ListItem from './ListItem.js';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import SubmitForm from './SubmitForm.js';
 import Header from './Header.js';
+import Community from './Community.js';
+import SignIn from './SignIn';
+import RecipePage from './RecipePage';
+
 
 class App extends Component {
   state = {
@@ -51,31 +55,14 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-        <header className="App-header">
-          <Header/>
-        </header>
+
         <Switch>
         <Route exact path="/form" component={SubmitForm}/>
+        <Route exact path="/" component={Community}/>
+        <Route exact path="/signin" component={SignIn}/>
 
         </Switch>
-        {/* <ul className="to-do-list">
-       {this.state.list.length > 0 && this.state.list.map((listItem, index) => (
-          <ListItem text={listItem} />
-        ))}
-          
-        </ul> */}
-        <form onSubmit={this.handleSubmit}>
-          <p>
-            <strong>Post to Server:</strong>
-          </p>
-          {/* <input
-            type="text"
-            value={this.state.post}
-            onChange={e => this.setState({ post: e.target.value })}
-          /> */}
-          <button className="submit-button" type="submit">Submit</button>
-        </form>
-        <p>{this.state.responseToPost}</p>
+
       </div>
       </Router>
     );
