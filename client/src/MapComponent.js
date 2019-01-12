@@ -36,18 +36,14 @@ const MyMapComponent = compose(
 
 class MapComponent extends Component {
   constructor(props) {
-  super(props);
-  // Don't call this.setState() here!
-  this.handleDisplayDetail = this.handleDisplayDetail.bind(this);
-}
-
-  handleDisplayDetail(){
-    console.log(this.props.displayDetail)
+    super(props);
   }
+
+
 
   render() {
     return (
-      <div onClick={this.handleDisplayDetail}>
+      <div onClick={this.props.onDisplayDetail}>
       <MyMapComponent isMarkerShown />
       </div>
     );

@@ -1,0 +1,2 @@
+exports.DATABASE_URL = process.env.DATABASE_URL || `mongodb://${process.env.SECRET_DB_USER}:${process.env.SECRET_DB_PS}@ds155774.mlab.com:55774/growinggarden`;
+exports.TEST_DATABASE_URL = process.env.TEST_DATABASE_URL || 'mongodb://localhost/test-meal-planner';
