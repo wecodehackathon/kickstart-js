@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="styles.css" type="text/css">
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
@@ -22,19 +23,45 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+ <div class="topnav" id="myTopnav"><img class="navlogo" src="">
+        <a href="index.html">Community</a>
+        <a href="">Recipes</a>
+        <a href="">Calendar</a>
+        <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
+        <!--<div class="headerArea"><img src="img/website_header.png">-->
+      </div>
+      <h2>Community Page</h2>
+        <p>Here is a paragraph about what this page does</p>
+      <div style="margin-bottom: 5px;">
+          <h3>Recent Posts</h3>
+            <input type="button" class="submit-btn" type="submit" value="New Post">
+      </div>
+    <div class="communityChat">
+        <div class="communityPost">
+            <p class= "postTitle">Wanted: Shovels</p>
+             <p class= "postDate">12/03/18</p>
+                <p>We have some small group of kids looking for gardening shovels. Maybe around 20?</p>
+        </div>
+          <div class="communityPost">
+            <p class= "postTitle">Looking for tomatoes</p>
+              <p class= "postDate">10/23/18</p>
+                <p>Hi, we are looking for extra tomatoes for the neighborhood spaghetti feed happening next wednesday. </p>
+        </div>
+          <div class="communityPost">
+            <p class= "postDate">Post three</p>
+                <p>Check out our new squash that we have sprouted!</p>
+        </div>
+    </div>
+      <script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
   </body>
 </html>
