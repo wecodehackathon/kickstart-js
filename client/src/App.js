@@ -21,6 +21,7 @@ class App extends Component {
       <Header />
       {!this.state.showThankYou && <TextNotifierForm setThankYou={this.setThankYou} />}
       {this.state.showThankYou && <Complete />}
+      <div className="hackit"></div>
       <Footer />
     </div>)
   }

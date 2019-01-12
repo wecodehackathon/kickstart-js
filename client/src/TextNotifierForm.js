@@ -91,27 +91,27 @@ class TextNotifierForm extends Component {
             return (
                 <div>
                     <ControlLabel>Choose your program:</ControlLabel>
-                    <FormGroup>
+                    <FormGroup className="program">
                         <div style={{display: 'flex', flexDirection:'row'}}>
-                        <div>
+                        <div className="day-column">
                             <h1>Monday</h1>
                             {this.schoolData[this.state.school].filter(program => program.weekOfDay === 'Monday').map(program => (
                                 <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>
                             ))}
                         </div>
-                        <div>
+                        <div className="day-column">
                             <h1>Tuesday</h1>
                             {this.schoolData[this.state.school].filter(program => program.weekOfDay === 'Tuesday').map(program => (
                                 <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>
                             ))}
                         </div>
-                        <div>
+                        <div className="day-column">
                             <h1>Wednesday</h1>
                             {this.schoolData[this.state.school].filter(program => program.weekOfDay === 'Wednesday').map(program => (
                                 <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>
                             ))}
                         </div>
-                        <div>
+                        <div className="day-column">
                             <h1>Thursday</h1>
                             {this.schoolData[this.state.school].filter(program => program.weekOfDay === 'Thursday').map(program => (
                                 <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>

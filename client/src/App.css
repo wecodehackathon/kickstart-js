@@ -13,8 +13,12 @@ body {
 }
 
 form {
-  width: 30%;
-  margin: 5% auto 5% auto;
+  width: 65%;
+  margin: 10% auto 5% auto;
+}
+
+Button {
+  padding-bottom: 500px;
 }
 
 .checkbox {
@@ -26,20 +30,33 @@ form {
   margin: 5% 0 2% 0;
 }
 
+.day-column {
+  margin-right: 30px;
+}
+
+.day-column checkbox {
+  max-width: 150px;
+}
+
 .form-group {
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 200px; */
   text-align: left;
 }
 
+.program {
+  display: flex;
+  justify-content: center;
+}
+
+.hackit {
+  height: 200px;
+}
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   top: 0;
+  position: fixed;
   width: 100%;
   background-color: #b7337a;
   color: white;
@@ -49,10 +66,11 @@ form {
 .footer {
   background-color: #b7337a;
   height: 60px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   box-shadow: 0px 1px 6px 1px grey;
+
 }
 
 .complete {
