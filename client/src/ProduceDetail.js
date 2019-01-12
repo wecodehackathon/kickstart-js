@@ -8,10 +8,23 @@ class ProduceDetail extends Component {
   render() {
 
     return (
-      <div>
-      Produce Detail
-        <div onClick={this.props.onDisplayDetail}>
-        X - close
+      <div className="produceDetail">
+        <div className="closeIconContainer">
+          <div className="closeIcon" onClick={this.props.onDisplayDetail}>
+          x
+          </div>
+        </div>
+        <img className="produceDetailImage"
+      src="https://www.growing-gardens.org/wp-content/uploads/2013/03/Angelina15101213600_1316-624x550.jpg"
+      alt="new"
+      />
+        <div>
+        Hola, me and my children would love to share our tomatoes with you, our neighbors.  Please come by and say hello.
+        </div>
+        <div>
+        </div>
+        <div>
+        7400 NE Frederickson Dr.
         </div>
       </div>
     );

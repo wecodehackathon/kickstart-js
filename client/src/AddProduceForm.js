@@ -8,10 +8,12 @@ class AddProduceForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="produceForm">
         ProduceForm
-        <div onClick={this.props.onAddProduceForm}>
-        X - close
+        <div className="closeIconContainer">
+          <div onClick={this.props.onAddProduceForm}>
+            X - close
+          </div>
         </div>
       </div>
     );
