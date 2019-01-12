@@ -1,17 +1,32 @@
 import React, { Component } from 'react';
 import './App.css';
 import ListItem from './ListItem.js';
+import { connect } from 'react-redux'
+
+import { UpdateText } from './_redux/actions/test'
 
 class App extends Component {
   state = {
     list: '',
     post: '',
     responseToPost: ''
+    , currentView: `omggggg`
   };
 
   componentDidMount() {
     this.updateTodoList();
   }
+
+  // componentSwitcher = () => {
+  //   const components = {
+  //     login: <Login />
+  //     , register: ()
+  //     , map: ()
+  //     , share: ()
+  //   }
+
+  //   return components[this.state.current]
+  // }
 
   updateTodoList() {
     this.callApi()
@@ -45,6 +60,7 @@ class App extends Component {
 
   render() {
     console.log(this.state.response);
+    console.log(`helllp mmmeeeeee      ${this.props.hmm}`)
     return (
       <div className="App">
         <header className="App-header">
@@ -67,10 +83,25 @@ class App extends Component {
           />
           <button className="submit-button" type="submit">Submit</button>
         </form>
+        <div style={{ display: `flex`, flexDirection: `column` }}>
+          <span onClick={() => this.props.dispatch(UpdateText(`yeeeeessssssss`))}>
+            {`do the thing!`}
+          </span>
+
+          <span>
+            {`\n\n${this.props.hmm}`}
+          </span>
+        </div>
         <p>{this.state.responseToPost}</p>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = ({ Test }) => {
+  return {
+    hmm: Test.text,
+  }
+}
+
+export default connect(mapStateToProps)(App)
