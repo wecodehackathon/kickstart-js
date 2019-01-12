@@ -24,6 +24,13 @@ Starting with the SUN school program, we created a text notification app where f
 
 ## Technologies Used
 
+* React
+* AWS Lambda 
+* DynamoDB
+* SNS (Simple Notification Service)
+
+* Deployed within IRCO's AWS Account using CloudFormation
+
 ## Getting Started
 
   1. Download the .zip file or clone from the command line
