@@ -1,7 +1,3 @@
-#sunLocations {
-
-}
-
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
@@ -15,10 +11,11 @@
     z-index: 1;
   }
 
-.tooltip:hover .tooltiptext {
+.list-group-item:hover .tooltiptext{
     visibility: visible;
   }
 
-.tooltip .tooltiptext {
-    visibility: hidden;
+.tooltiptext {
+    visibility: collapse;
+    float: right;
   }
