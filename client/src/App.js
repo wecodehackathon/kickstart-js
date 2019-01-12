@@ -8,7 +8,7 @@ import TextNotifierForm from './TextNotifierForm';
 
 class App extends Component {
   state = {
-    showThankYou: true
+    showThankYou: false
   };
 
   setThankYou = () => {
