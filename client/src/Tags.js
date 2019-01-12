@@ -19,8 +19,8 @@ class Tags extends React.Component {
         this.state = {
             tags: [
                 { id: "Tools", text: "Tools" },
-                { id: "Produce", text: "Produce" }
-                { id: "Seeds", text: "Seeds" }
+                { id: "Produce", text: "Produce" },
+                { id: "Seeds", text: "Seeds" },
                 { id: "Recipe", text: "Recipe" }
              ],
             suggestions: [
@@ -74,5 +74,6 @@ class Tags extends React.Component {
     }
 };
  
-export { Tags };
+
 ReactDOM.render(<App />, document.getElementById('app'));
+export default Tags;
