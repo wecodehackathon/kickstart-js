@@ -1,5 +1,5 @@
 # IRCO Class Notifier
-Created By Mary Anne Thygesen, Anna Spysz, Claire Flanagan, Adrianna Chen, Sarah Steinberg
+Created By Mary Anne Thygesen, Anna Spysz, Claire Flanagan, Adrianna Chen, Sarah Steinberg and Ben Kiggen.
 
 ## About the App
 
