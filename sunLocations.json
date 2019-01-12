@@ -1,0 +1,180 @@
+[{
+	"locName": "IRCO",
+	"street": "10301 N.E. Glisan Street",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97220,
+	"lat": 45.52687,
+	"lon": -122.556986
+},
+{
+	"locName": "Earl Boyles Elementary School",
+	"street": "10822 S.E. Bush Street",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97266,
+	"lat": 45.494709,
+	"lon": -122.551952
+},
+{
+	"locName": "George Middle School",
+	"street": "10000 North Burr Avenue",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97203,
+	"lat": 45.596308,
+	"lon": -122.736689
+},
+{
+	"locName": "Gilbert Heights Elementary School",
+	"street": "12839 S.E. Holgate Boulevard",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97236,
+	"lat": 45.490621,
+	"lon": -122.531794
+},
+{
+	"locName": "Gilbert Park Elementary School",
+	"street": "13132 S.E. Ramona Street",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97236,
+	"lat": 45.479857,
+	"lon": -122.52839
+},
+{
+	"locName": "Harrison Park School",
+	"street": "2225 S.E. 87th Avenue",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97216,
+	"lat": 45.507119,
+	"lon": -122.574848
+},
+{
+	"locName": "Jason Lee K-8 School",
+	"street": "2222 N.E. 92nd Avenue",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97220,
+	"lat": 45.538346,
+	"lon": -122.567649
+},
+{
+	"locName": "Lent K-8 School",
+	"street": "5105 S.E. 97th Avenue",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97266,
+	"lat": 45.485502,
+	"lon": -122.564087
+},
+{
+	"locName": "Lincoln Park Elementary School",
+	"street": "13200 S.E. Lincoln Street",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97233,
+	"lat": 45.508358,
+	"lon": -122.526282
+},
+{
+	"locName": "Madison High School",
+	"street": "2735 N.E. 82nd Avenue",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97220,
+	"lat": 45.542038,
+	"lon": -122.580315
+},
+{
+	"locName": "Menlo Park Elementary School",
+	"street": "12900 N.E. Glisan Street",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97230,
+	"lat": 45.525606,
+	"lon": -122.530272
+},
+{
+	"locName": "Mill Park Elementary School",
+	"street": "1900 S.E. 117th Avenue",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97216,
+	"lat": 45.510042,
+	"lon": -122.541273
+},
+{
+	"locName": "Parkrose Middle School",
+	"street": "11800 N.E. Shaver Street",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97220,
+	"lat": 45.551218,
+	"lon": -122.540559
+},
+{
+	"locName": "Russell Elementary School",
+	"street": "2700 N.E. 127th Avenue",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97230,
+	"lat": 45.541535,
+	"lon": -122.531289
+},
+{
+	"locName": "Sacramento Elementary School",
+	"street": "11400 N.E. Sacramento Street",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97216,
+	"lat": 45.538659,
+	"lon": -122.544871
+},
+{
+	"locName": "Shaver Elementary School",
+	"street": "3701 N.E. 131st Place",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97230,
+	"lat": 45.549681,
+	"lon": -122.528831
+},
+{
+	"locName": "Ventura Park Elementary School",
+	"street": "145 S.E.117th Avenue",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97216,
+	"lat": 45.521613,
+	"lon": -122.544192
+},
+{
+	"locName": "Vestal K-8 School",
+	"street": "161 N.E. 82nd Avenue",
+	"city": "Portland",
+	"state": "OR",
+	"zip": 97220,
+	"lat": 45.524821,
+	"lon": -122.579703
+},
+{
+	"locName": "Walt Morey Middle School",
+	"street": "2801 S.W. Lucas Avenue",
+	"city": "Troutdal",
+	"state": "OR",
+	"zip": 97060,
+	"lat": 45.522877,
+	"lon": -122.407143
+},
+{
+	"locName": "Woodland Elementary School",
+	"street": "21607 N.E. Glisan Street",
+	"city": "Fairview",
+	"state": "OR",
+	"zip": 97024,
+	"lat": 45.529148,
+	"lon": -122.440229
+}]
