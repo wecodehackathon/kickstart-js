@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import ListItem from './ListItem.js';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import SubmitForm from './SubmitForm';
 
 class App extends Component {
   state = {
@@ -46,10 +48,15 @@ class App extends Component {
   render() {
     console.log(this.state.response);
     return (
+      <Router>
       <div className="App">
         <header className="App-header">
           <h1>To Do List</h1>
         </header>
+        <Switch>
+        <Route exact path="/form" component={SubmitForm}/>
+
+        </Switch>
         <ul className="to-do-list">
        {this.state.list.length > 0 && this.state.list.map((listItem, index) => (
           <ListItem text={listItem} />
@@ -69,6 +76,7 @@ class App extends Component {
         </form>
         <p>{this.state.responseToPost}</p>
       </div>
+      </Router>
     );
   }
 }
