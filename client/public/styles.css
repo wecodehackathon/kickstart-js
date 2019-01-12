@@ -69,6 +69,15 @@ p {
   font-size: 16px;
     margin-left:114px;
 }
+.postDate {
+    color:cadetblue;
+    font-size:14px;
+}
+.postTitle {
+    font-weight: 400;
+    font-size:18px;
+    color:#e89a35;
+}
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
