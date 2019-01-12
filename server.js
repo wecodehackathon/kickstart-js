@@ -6,6 +6,12 @@ require('dotenv').config();
 
 const app = express();
 
+const meetupModel = require('./models');
+
+const {
+  addItemToDB,
+  getAllItemsFromDB,
+} = require('./data-layer')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,11 +25,12 @@ app.post('/api/addItem', (req, res) => {
   // displays in the terminal
   console.log('adding Item', req.body);
   // toDoList.push(req.body.post);
-  res.send('Item added!');
+  addItemToDB(req.body).then(() => res.send('Item added!'));
 });
 
 app.get('/api/getMeetups', (req, res) => {
   console.log('getting meetups', req.body);
+  getAllItemsFromDB().then((Response) => res.send(Response));
 });
 
 if (process.env.NODE_ENV === 'production') {
