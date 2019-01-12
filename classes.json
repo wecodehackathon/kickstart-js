@@ -1,0 +1,475 @@
+// SUN school classes
+
+[
+    {
+    "SUN school": 
+        [
+            {
+                "name": "Bravo",
+                "start": "2019, 6, 1",
+                "end": "2019, 6, 1",
+                "weekOfDay": "Monday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 6th",
+                "start": "2019, 6, 1",
+                "end": "2019, 6, 1",
+                "weekOfDay": "Monday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name":"Campfire 7th",
+                "start": "2019, 6, 1",
+                "end": "2019, 6, 1",
+                "weekOfDay": "Monday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {   "name": "Campfire 8th",
+                "start": "2019, 6, 1",
+                "end": "2019, 6, 1",
+                "weekOfDay": "Monday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Homework Club",
+                "start": "2019, 6, 1",
+                "end": "2019, 6, 1",
+                "weekOfDay": "Monday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Bravo",
+                "start": "2019, 6, 2",
+                "end": "2019, 6, 2",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 6th",
+                "start": "2019, 6, 2",
+                "end": "2019, 6, 2",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 7th",
+                "start": "2019, 6, 2",
+                "end": "2019, 6, 2",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+           {
+               "name": "Campfire 8th",
+                "start": "2019, 6, 2",
+                "end": "2019, 6, 2",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name":"Africa House: African Club",
+                "start": "2019, 6, 2",
+                "end": "2019, 6, 2",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Create Hip Hop Music",
+                "start": "2019, 6, 2",
+                "end": "2019, 6, 2",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Hacienda",
+                "start": "2019, 6, 2",
+                "end": "2019, 6, 2",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Homework Club",
+                "start": "2019, 6, 2",
+                "end": "2019, 6, 2",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {   "name": "MBA Basketball",
+                "start": "2019, 6, 2",
+                "end": "2019, 6, 2",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Hip Hop Dance",
+                "start": "2019, 6, 2",
+                "end": "2019, 6, 2",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Bravo",
+                "start": "2019, 6, 3",
+                "end": "2019, 6, 3",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 6th",
+                "start": "2019, 6, 3",
+                "end": "2019, 6, 3",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 7th",
+                "start": "2019, 6, 3",
+                "end": "2019, 6, 3",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 8th",
+                "start": "2019, 6, 3",
+                "end": "2019, 6, 3",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Africa House: African Club",
+                "start": "2019, 6, 3",
+                "end": "2019, 6, 3",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Create Hip Hop Music",
+                "start": "2019, 6, 3",
+                "end": "2019, 6, 3",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Hacienda",
+                "start": "2019, 6, 3",
+                "end": "2019, 6, 3",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Homework Club",
+                "start": "2019, 6, 3",
+                "end": "2019, 6, 3",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "MBA Basketball",
+                "start": "2019, 6, 3",
+                "end": "2019, 6, 3",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Hip Hop Dance",
+                "start": "2019, 6, 3",
+                "end": "2019, 6, 3",
+                "weekOfDay": "Wednesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Bravo",
+                "start": "3049, 6, 4",
+                "end": "2049, 6, 4",
+                "weekOfDay": "Thursday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 6th",
+                "start": "2019, 6, 4",
+                "end": "2019, 6, 4",
+                "weekOfDay": "Thursday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 7th",
+                "start": "2019, 6, 4",
+                "end": "2019, 6, 4",
+                "weekOfDay": "Thursday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 8th",
+                "start": "2019, 6, 4",
+                "end": "2019, 6, 4",
+                "weekOfDay": "Thursday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Homework Club",
+                "start": "2019, 6, 4",
+                "end": "2019, 6, 4",
+                "weekOfDay": "Thursday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Hacienda",
+                "start": "2019, 6, 4",
+                "end": "2019, 6, 4",
+                "weekOfDay": "Thursday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Homework Club",
+                "start": "2019, 6, 4",
+                "end": "2019, 6, 4",
+                "weekOfDay": "Thursday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "MBA Basketball",
+                "start": "2019, 6, 4",
+                "end": "2019, 6, 4",
+                "weekOfDay": "Thursday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            }
+            
+        ] 
+    },
+    {
+    "Moon school": 
+        [
+            {
+                "name": "Bravo",
+                "start": "2019, 8, 11",
+                "end": "2019, 8, 11",
+                "weekOfDay": "Wendsday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 6th",
+                "start": "2019, 8, 111",
+                "end": "2019, 8, 11",
+                "weekOfDay": "Wendsday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name":"Campfire 7th",
+                "start": "2019, 8, 11",
+                "end": "2019, 8, 11",
+                "weekOfDay": "Wendsday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {   "name": "Campfire 8th",
+                "start": "2019, 8, 11",
+                "end": "2019, 8, 111",
+                "weekOfDay": "Wendsday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Homework Club",
+                "start": "2019, 8, 111",
+                "end": "2019, 8, 111",
+                "weekOfDay": "Wendsday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Bravo",
+                "start": "2019, 7, 2",
+                "end": "2019, 7, 2",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 6th",
+                "start": "2019, 7, 2",
+                "end": "2019, 7, 2",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 7th",
+                "start": "2019, 7, 2",
+                "end": "2019, 7, 2",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 8th",
+                "start": "2019, 7, 2",
+                "end": "2019, 7, 2",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name":"Africa House: African Club",
+                "start": "2019, 7, 2",
+                "end": "2019, 7, 2",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Create Hip Hop Music",
+                "start": "2019, 7, 2",
+                "end": "2019, 7, 2",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Hacienda",
+                "start": "2019, 7, 2",
+                "end": "2019, 7, 2",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Homework Club",
+                "start": "2019, 7, 2",
+                "end": "2019, 7, 2",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {   "name": "MBA Basketball",
+                "start": "2019, 7, 2",
+                "end": "2019, 7, 2",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Hip Hop Dance",
+                "start": "2019, 7, 2",
+                "end": "2019, 7, 2",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Bravo",
+                "start": "2019, 8, 3",
+                "end": "2019, 8, 3",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 6th",
+                "start": "2019, 8, 3",
+                "end": "2019, 8, 3",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 7th",
+                "start": "2019, 8, 3",
+                "end": "2019, 8, 3",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 8th",
+                "start": "2019, 8, 3",
+                "end": "2019, 8, 3",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Africa House: African Club",
+                "start": "2019, 8, 3",
+                "end": "2019, 8, 3",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Create Hip Hop Music",
+                "start": "2019, 8, 3",
+                "end": "2019, 8, 3",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Hacienda",
+                "start": "2019, 8, 3",
+                "end": "2019, 8, 3",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Homework Club",
+                "start": "2019, 8, 3",
+                "end": "2019, 8, 3",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "MBA Basketball",
+                "start": "2019, 8, 3",
+                "end": "2019, 8, 3",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Hip Hop Dance",
+                "start": "2019, 8, 3",
+                "end": "2019, 8, 3",
+                "weekOfDay": "Tuesday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Bravo",
+                "start": "3049, 6, 4",
+                "end": "2049, 6, 4",
+                "weekOfDay": "Wednsday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 6th",
+                "start": "2019, 8, 4",
+                "end": "2019, 8, 4",
+                "weekOfDay": "Wednsday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 7th",
+                "start": "2019, 8, 4",
+                "end": "2019, 8, 4",
+                "weekOfDay": "Wednsday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Campfire 8th",
+                "start": "2019, 8, 4",
+                "end": "2019, 8, 4",
+                "weekOfDay": "Wednsday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Homework Club",
+                "start": "2019, 8, 4",
+                "end": "2019, 8, 4",
+                "weekOfDay": "Wednsday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Hacienda",
+                "start": "2019, 8, 4",
+                "end": "2019, 8, 4",
+                "weekOfDay": "Wednsday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "Homework Club",
+                "start": "2019, 8, 4",
+                "end": "2019, 8, 4",
+                "weekOfDay": "Wednsday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            },
+            {
+                "name": "MBA Basketball",
+                "start": "2019, 8, 4",
+                "end": "2019, 8, 4",
+                "weekOfDay": "Wednsday",        
+                "timeOfActivity": "1:15 - 5:05 pm"
+            }
+            
+        ] 
+    }
+]
+
