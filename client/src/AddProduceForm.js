@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
-class ProduceDetail extends Component {
+class AddProduceForm extends Component {
+
   constructor(props) {
     super(props);
   }
 
   render() {
-
     return (
       <div>
-      Produce Detail
-        <div onClick={this.props.onDisplayDetail}>
+        ProduceForm
+        <div onClick={this.props.onAddProduceForm}>
         X - close
         </div>
       </div>
@@ -18,4 +18,4 @@ class ProduceDetail extends Component {
   }
 }
 
-export default ProduceDetail;
+export default AddProduceForm;
