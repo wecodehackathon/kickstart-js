@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // API calls
 app.get('/api/hello', (req, res) => {
-  res.send({ toDoList });
+  res.send('hello');
 });
 
 app.post('/api/addItem', (req, res) => {
@@ -56,7 +56,7 @@ const disconnectMongo = mongoose.disconnect.bind(mongoose);
 
 function runServer(
   databaseUrl = DATABASE_URL,
-  port = process.env.PORT || 5000,
+  port = process.env.PORT || 7000,
 ) {
   // console.log(databaseUrl);
   return connectMongo(databaseUrl, {
