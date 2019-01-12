@@ -1,0 +1,22 @@
+#map-view {
+
+}
+
+#map-view header {
+    height: 10vh;
+    min-height: 5em;
+    background-color: #4C6653;
+    display: flex;
+}
+
+#map-view header img {
+    height: 100%;
+}
+
+#map-view header h3 {
+    display: inline-block;
+}
+
+#map {
+    height: 90vh;
+}
