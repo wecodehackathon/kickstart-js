@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom'; 
-import logo from '../public/img/logo.jpg'
+import logo from './logo.jpg'
 
 class Header extends Component {
 
