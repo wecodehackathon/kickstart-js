@@ -11,8 +11,8 @@ class App extends Component {
     showThankYou: false
   };
 
-  setThankYou = () => {
-    this.setState({ showThankYou: true })
+  setThankYou = (showThankYou) => {
+    this.setState({ showThankYou })
   }
 
   render() {

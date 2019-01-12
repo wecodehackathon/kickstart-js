@@ -39,108 +39,127 @@ class TextNotifierForm extends Component {
         isSchoolValid: false,
     };
     schools = schoolProgramData.map(schoolProgram => Object.keys(schoolProgram)[0]);
-
-  showThankYouPage = () => {
-      alert('go to the thank you page.')
-  }
-  handleSubmit = async e => {
-    if (this.state.isPhoneValid && this.state.isSchoolValid){
-        e.preventDefault();
-        console.log('this is the state of things when we submit: ', this.state)
-        const response = await fetch('https://dbasak1sjk.execute-api.us-west-2.amazonaws.com/development/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                phone: this.state.phone,
-                school: this.state.school,
-                programs: this.state.programs,
-            })
-        });
-        
-        const body = await response.text()
-        .then(this.props.showThankYouPage());
-        }else{
-        alert('Invalid phone number or school')
-    }
-  }
-  renderSubmitButton = () => {
-    return (
-    <div>
-        {/* <Button disabled={this.state.formIsInvalid} onClick={this.handleSubmit}>Sign Me Up!</Button> */}
-        <Button onClick={this.handleSubmit}>Sign Me Up!</Button>
-    </div>)
-  }
-
-  handlePhoneNumber = phoneNumber => {
-      if (/^\d{10}$/.test(this.textInput.value)){
-          this.setState({ phone: this.textInput.value });
-          this.setState({isPhoneValid: true});
-      }
-  }
-  handleSchoolSelection = e => {
-      if (e.target.value){
-          this.setState({ school: e.target.value });
-          this.setState({ isSchoolValid: true})
-      }
-  }
-  handleProgramSelection = program => {
-      const selectedPrograms = this.state.programs;
-      selectedPrograms.push(program);
-      this.setState({ programs: selectedPrograms });
-  }
-  renderPrograms = () => {
-      if (this.state.school !== '') {
-        return (
-            <div>
-                <ControlLabel>Choose your program:</ControlLabel>
-                <FormGroup>
-                    {this.schoolData[this.state.school].map(program => (
-                        <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>
-                    ))}
-                </FormGroup>
-            </div>
-        )
-      }
-      return null;
-  }
-  renderFormElements = () => {
-      const formInstance = (
-        <form>
-          <FieldGroup
-            id="phoneNumber"
-            type="text"
-            label="Enter your phone number:"
-            placeholder="Enter your phone number"
-            inputRef={input => this.textInput = input}
-            onChange={this.handlePhoneNumber}
+    handleSubmit = async e => {
+        if (this.state.isPhoneValid && this.state.isSchoolValid){
+            e.preventDefault();
+            console.log('this is the state of things when we submit: ', this.state)
+            const response = await fetch('https://dbasak1sjk.execute-api.us-west-2.amazonaws.com/development/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    phone: this.state.phone,
+                    school: this.state.school,
+                    programs: this.state.programs,
+                })
+            });
             
-          />
-           <FormGroup controlId="schoolSelect">
-            <ControlLabel>Choose your school:</ControlLabel>
-            <FormControl componentClass="select" placeholder="select" onChange={this.handleSchoolSelection}>
-                <option value="">[ Select School ]</option>
-                {this.schools.map(school => (
-                    <option value={school}>{school}</option>
-                ))}
-            </FormControl>
-            </FormGroup>
+            const body = await response.text()
+            .then(this.props.showThankYouPage(true));
+        } else {
+            alert('Invalid phone number or school')
+        }
+    }
+    renderSubmitButton = () => {
+        return (
+        <div>
+            {/* <Button disabled={this.state.formIsInvalid} onClick={this.handleSubmit}>Sign Me Up!</Button> */}
+            <Button onClick={this.handleSubmit}>Sign Me Up!</Button>
+        </div>)
+    }
 
-            {this.renderPrograms()}
-          </form>
-        );
-        return formInstance;
-  }
+    handlePhoneNumber = phoneNumber => {
+        if (/^\d{10}$/.test(this.textInput.value)){
+            this.setState({ phone: this.textInput.value });
+            this.setState({isPhoneValid: true});
+        }
+    }
+    handleSchoolSelection = e => {
+        if (e.target.value){
+            this.setState({ school: e.target.value });
+            this.setState({ isSchoolValid: true})
+        }
+    }
+    handleProgramSelection = program => {
+        const selectedPrograms = this.state.programs;
+        selectedPrograms.push(program);
+        this.setState({ programs: selectedPrograms });
+    }
+    renderPrograms = () => {
+        if (this.state.school !== '') {
+            return (
+                <div>
+                    <ControlLabel>Choose your program:</ControlLabel>
+                    <FormGroup>
+                        <div style={{display: 'flex', flexDirection:'row'}}>
+                        <div>
+                            <h1>Monday</h1>
+                            {this.schoolData[this.state.school].filter(program => program.weekOfDay === 'Monday').map(program => (
+                                <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>
+                            ))}
+                        </div>
+                        <div>
+                            <h1>Tuesday</h1>
+                            {this.schoolData[this.state.school].filter(program => program.weekOfDay === 'Tuesday').map(program => (
+                                <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>
+                            ))}
+                        </div>
+                        <div>
+                            <h1>Wednesday</h1>
+                            {this.schoolData[this.state.school].filter(program => program.weekOfDay === 'Wednesday').map(program => (
+                                <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>
+                            ))}
+                        </div>
+                        <div>
+                            <h1>Thursday</h1>
+                            {this.schoolData[this.state.school].filter(program => program.weekOfDay === 'Thursday').map(program => (
+                                <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>
+                            ))}
+                        </div>
+                        </div>
+                    </FormGroup>
+                </div>
+            )
+        }
+        return null;
+    }
+    renderFormElements = () => {
+        const formInstance = (
+            <form>
+            <FieldGroup
+                id="phoneNumber"
+                type="text"
+                label="Enter your phone number:"
+                placeholder="Enter your phone number"
+                inputRef={input => this.textInput = input}
+                onChange={this.handlePhoneNumber}
+                
+            />
+            <FormGroup controlId="schoolSelect">
+                <ControlLabel>Choose your school:</ControlLabel>
+                <FormControl componentClass="select" placeholder="select" onChange={this.handleSchoolSelection}>
+                    <option value="">[ Select School ]</option>
+                    {this.schools.map(school => (
+                        <option value={school}>{school}</option>
+                    ))}
+                </FormControl>
+                </FormGroup>
 
-  render() {
-   return (
-   <div >
-       {this.renderFormElements()}
-       {this.renderSubmitButton()}
+                {this.renderPrograms()}
+            </form>
+            );
+            return formInstance;
+    }
 
-    </div>);
-  }
+    render() {
+    return (
+    <div >
+        {this.renderFormElements()}
+        {this.renderSubmitButton()}
+
+        </div>);
+    }
 }
 TextNotifierForm.propTypes = {
     showThankYouPage: PropTypes.func
