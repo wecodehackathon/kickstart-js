@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import Tags from './Tags.js'
+import Tags from './Tags.js'
 class SubmitForm extends Component {
 
   state = {
@@ -22,8 +22,8 @@ class SubmitForm extends Component {
         </label>
         <label>
           <h4>Tags</h4>
-          {/* <Tags/> */}
-          {/* Tags component here */}
+          <Tags/>
+          
         </label>
         <button>Submit</button>
         </form>

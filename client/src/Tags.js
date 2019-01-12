@@ -75,5 +75,5 @@ class Tags extends React.Component {
 };
  
 
-ReactDOM.render(<App />, document.getElementById('app'));
+// ReactDOM.render(<Tags />, document.getElementById('app'));
 export default Tags;
