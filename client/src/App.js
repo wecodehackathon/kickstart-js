@@ -58,21 +58,21 @@ class App extends Component {
         <Route exact path="/form" component={SubmitForm}/>
 
         </Switch>
-        <ul className="to-do-list">
+        {/* <ul className="to-do-list">
        {this.state.list.length > 0 && this.state.list.map((listItem, index) => (
           <ListItem text={listItem} />
         ))}
           
-        </ul>
+        </ul> */}
         <form onSubmit={this.handleSubmit}>
           <p>
             <strong>Post to Server:</strong>
           </p>
-          <input
+          {/* <input
             type="text"
             value={this.state.post}
             onChange={e => this.setState({ post: e.target.value })}
-          />
+          /> */}
           <button className="submit-button" type="submit">Submit</button>
         </form>
         <p>{this.state.responseToPost}</p>

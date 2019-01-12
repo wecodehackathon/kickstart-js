@@ -4,6 +4,7 @@ import './index.css';
 import { WithContext as ReactTags } from 'react-tag-input';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import './reactTags.css';
 
 const KeyCodes = {
   comma: 188,
@@ -68,7 +69,9 @@ class Tags extends React.Component {
                     handleDelete={this.handleDelete}
                     handleAddition={this.handleAddition}
                     handleDrag={this.handleDrag}
-                    delimiters={delimiters} />
+                    delimiters={delimiters}
+                    inline={false} 
+                    />
             </div>
         )
     }
