@@ -1,20 +1,21 @@
+# Geographic service-finding for IRCO
 
-## Resources
+## how to view this project
 
-Git: Forking a Repo: https://guides.github.com/activities/forking/
+This additional section to be added to the IRCO site is now served as a portion of a static copy of the IRCO's 'youth' page, to run it yourself all you have to do is:
 
-React: https://reactjs.org/docs/getting-started.html
+1. download this repository
+2. open index.html in a browser
 
-Basic State in React: https://reactjs.org/docs/state-and-lifecycle.html#using-state-correctly
+## using this project in your own page
 
-CSS via Mozilla: https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS
+To add this map section to your application, complete with some pre-baked map locations, place the snippet from `map.html` into your page
 
-CSS-Tricks: https://css-tricks.com/snippets/
+## Contributors 
 
-Color Palettes: http://colormind.io/
-
-Color Palette Generator: https://www.canva.com/color-palette/
-
-Google Fonts: https://fonts.google.com/
-
-Font Pairings: https://www.typewolf.com/google-fonts
+Sarah Rehmer - Development
+Tanvi Garg - Development
+Hannah Scovill - Data, UX, Development
+Kristina Mucker - Requirements, Images, theme, HTML
+Toby Fee - AWS hosting, Development, music selection
+Megan McMillan - Lead, UX, project submission, presentation
