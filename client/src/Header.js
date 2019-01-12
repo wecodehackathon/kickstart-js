@@ -4,8 +4,8 @@ import './App.css';
 export default function Header() {
   return (
     <div className="header">
-      <h1>IRCO Notifier</h1>
-      <img src="Logo-Black.png" alt="IRCO logo"/>
+      <img src="Logo-White.png" alt="IRCO logo"/>
+      <h1>Class Notifier</h1>
     </div>
   )
 }

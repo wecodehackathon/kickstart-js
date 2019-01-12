@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import ListItem from './ListItem.js';
 import Header from './Header';
+import Complete from './Complete';
+
 
 class App extends Component {
   state = {
@@ -49,11 +51,12 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Complete />
         <ul className="to-do-list">
        {this.state.list.length > 0 && this.state.list.map((listItem, index) => (
           <ListItem text={listItem} />
         ))}
-          
+
         </ul>
         <form onSubmit={this.handleSubmit}>
           <p>

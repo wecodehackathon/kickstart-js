@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 /* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -18,21 +20,40 @@
   color: white;
   padding-bottom: 10px;
 } */
+*{
+  font-family: Montserrat;
+}
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px black solid;
+  background-color: #b7337a;
+  color: white;
+  box-shadow: 0px 1px 6px 1px grey;
+}
+
+.complete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 200px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
 }
 
 .header img {
   margin: 3vw;
-  height: 10vw;
+  height: 10vh;
 }
 
 .header h1 {
   margin: 3vw;
+  font-size: 6vw;
 }
 
 .App-link {
