@@ -4,7 +4,7 @@ import ListItem from './ListItem.js';
 
 class App extends Component {
   state = {
-    list: '',
+    list: 'this',
     post: '',
     responseToPost: ''
   };
