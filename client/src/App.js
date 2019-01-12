@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <LandingPage />
-        <MapComponent />
+        <MapComponent displayDetail={this.state.displayDetail}/>
         <Switch>
          <Route path='/' render={()=> <ProduceDetail />} />
        </Switch>

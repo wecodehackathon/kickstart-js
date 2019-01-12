@@ -31,11 +31,19 @@ const MyMapComponent = compose(
 ));
 
 class MapComponent extends Component {
+  constructor(props) {
+  super(props);
+  // Don't call this.setState() here!
+  this.handleDisplayDetail = this.handleDisplayDetail.bind(this);
+}
 
+  handleDisplayDetail(){
+    console.log(this.props.displayDetail)
+  }
 
   render() {
     return (
-      <div onClick="">
+      <div onClick={this.handleDisplayDetail}>
       <MyMapComponent isMarkerShown />
       </div>
     );
