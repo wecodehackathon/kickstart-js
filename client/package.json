@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "^3.8.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-google-maps": "^9.4.5",

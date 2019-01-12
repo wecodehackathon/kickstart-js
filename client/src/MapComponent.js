@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {
   withScriptjs,
   withGoogleMap,
@@ -24,9 +24,13 @@ const MyMapComponent = compose(
   withGoogleMap
 )(props => (
   <GoogleMap defaultZoom={8} defaultCenter={{ lat: -34.397, lng: 150.644 }}>
-  {props.isMarkerShown && (
-    <Marker position={{ lat: -34.397, lng: 150.644 }} />
-  )}
+    {props.isMarkerShown && (
+          <Fragment>
+            <Marker position={{ lat: 45.512794, lng: -122.679565 }} />
+            <Marker position={{ lat: 45.512044, lng: -122.683526 }} />
+            <Marker position={{ lat: 45.512052, lng: -122.680916 }} />
+        </Fragment>
+      )}
   </GoogleMap>
 ));
 

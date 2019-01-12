@@ -4,6 +4,7 @@ import { compose, withProps } from "recompose";
 import React, { Component } from 'react';
 import './App.css';
 import MapComponent from './MapComponent';
+import FormComponent from './FormComponent';
 import LandingPage from './LandingPage';
 import ProduceDetail from './ProduceDetail';
 import AddProduceFormButton from './AddProduceFormButton';
