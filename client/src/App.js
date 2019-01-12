@@ -5,10 +5,12 @@ import React, { Component } from 'react';
 import './App.css';
 import MapComponent from './MapComponent';
 import LandingPage from './LandingPage';
+import ProduceDetail from './ProduceDetail';
+import { Switch, Route } from 'react-router-dom';
 
 class App extends Component {
   state = {
-    displayDetail: false;
+    displayDetail: false,
   };
 
 
@@ -18,6 +20,9 @@ class App extends Component {
       <div className="App">
         <LandingPage />
         <MapComponent />
+        <Switch>
+         <Route path='/' render={()=> <ProduceDetail />} />
+       </Switch>
       </div>
     );
   }
