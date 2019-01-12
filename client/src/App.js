@@ -43,6 +43,7 @@ class App extends Component {
         {this.state.displayDetail && <ProduceDetail onDisplayDetail={this.handleDisplayDetail} />}
         <AddProduceFormButton onAddProduceForm={this.handleAddProduceForm}/>
         {this.state.displayAddProduceForm && <AddProduceForm onAddProduceForm={this.handleAddProduceForm}/>}
+        <FormComponent />
       </div>
     );
   }
