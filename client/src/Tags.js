@@ -18,16 +18,18 @@ class Tags extends React.Component {
  
         this.state = {
             tags: [
-                { id: "Thailand", text: "Thailand" },
-                { id: "India", text: "India" }
+                { id: "Tools", text: "Tools" },
+                { id: "Produce", text: "Produce" }
+                { id: "Seeds", text: "Seeds" }
+                { id: "Recipe", text: "Recipe" }
              ],
             suggestions: [
-                { id: 'USA', text: 'USA' },
-                { id: 'Germany', text: 'Germany' },
-                { id: 'Austria', text: 'Austria' },
-                { id: 'Costa Rica', text: 'Costa Rica' },
-                { id: 'Sri Lanka', text: 'Sri Lanka' },
-                { id: 'Thailand', text: 'Thailand' }
+                { id: 'Fruits', text: 'Fruits' },
+                { id: 'Vegetables', text: 'Vegetables' },
+                { id: 'Spanish', text: 'Spanish' },
+                { id: 'Lents', text: 'Lents' },
+                { id: 'Milwaukie', text: 'Milwaukie' },
+                { id: 'Cully', text: 'Cully' }
              ]
         };
         this.handleDelete = this.handleDelete.bind(this);
