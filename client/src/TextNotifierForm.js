@@ -39,6 +39,7 @@ class TextNotifierForm extends Component {
         isSchoolValid: false,
     };
     schools = schoolProgramData.map(schoolProgram => Object.keys(schoolProgram)[0]);
+    
     handleSubmit = async e => {
         if (this.state.isPhoneValid && this.state.isSchoolValid){
             e.preventDefault();
@@ -53,10 +54,10 @@ class TextNotifierForm extends Component {
                     school: this.state.school,
                     programs: this.state.programs,
                 })
-            });
+            }).then(this.props.setThankYou(true));
             
-            const body = await response.text()
-            .then(this.props.showThankYouPage(true));
+            // const body = await response.text()
+            // .then(this.props.showThankYouPage(true));
         } else {
             alert('Invalid phone number or school')
         }
@@ -96,25 +97,25 @@ class TextNotifierForm extends Component {
                         <div className="day-column">
                             <h1>Monday</h1>
                             {this.schoolData[this.state.school].filter(program => program.weekOfDay === 'Monday').map(program => (
-                                <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>
+                                <Checkbox onChange={() => this.handleProgramSelection(`${program.name} - ${program.weekOfDay}`)}>{program.name}</Checkbox>
                             ))}
                         </div>
                         <div className="day-column">
                             <h1>Tuesday</h1>
                             {this.schoolData[this.state.school].filter(program => program.weekOfDay === 'Tuesday').map(program => (
-                                <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>
+                                <Checkbox onChange={() => this.handleProgramSelection(`${program.name} - ${program.weekOfDay}`)}>{program.name}</Checkbox>
                             ))}
                         </div>
                         <div className="day-column">
                             <h1>Wednesday</h1>
                             {this.schoolData[this.state.school].filter(program => program.weekOfDay === 'Wednesday').map(program => (
-                                <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>
+                                <Checkbox onChange={() => this.handleProgramSelection(`${program.name} - ${program.weekOfDay}`)}>{program.name}</Checkbox>
                             ))}
                         </div>
                         <div className="day-column">
                             <h1>Thursday</h1>
                             {this.schoolData[this.state.school].filter(program => program.weekOfDay === 'Thursday').map(program => (
-                                <Checkbox onChange={() => this.handleProgramSelection(program.name)}>{program.name}</Checkbox>
+                                <Checkbox onChange={() => this.handleProgramSelection(`${program.name} - ${program.weekOfDay}`)}>{program.name}</Checkbox>
                             ))}
                         </div>
                         </div>
@@ -162,7 +163,7 @@ class TextNotifierForm extends Component {
     }
 }
 TextNotifierForm.propTypes = {
-    showThankYouPage: PropTypes.func
+    setThankYou: PropTypes.func
   };
 
 

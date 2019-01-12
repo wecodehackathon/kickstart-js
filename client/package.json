@@ -1,4 +1,5 @@
 {
+  "homepage": "https://adrianacmy.github.io/kickstart-js",
   "name": "create-react-app-express",
   "version": "0.1.0",
   "license": "MIT",
@@ -10,10 +11,15 @@
     "react-scripts": "2.0.5"
   },
   "scripts": {
+    "predeploy": "npm run build-g",
+    "deploy": "gh-pages -d build-g",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build-g": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-js": "react-scripts build",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/"
   },
   "proxy": "http://localhost:5000/",
   "browserslist": [
