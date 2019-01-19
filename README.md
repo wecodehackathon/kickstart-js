@@ -1,10 +1,12 @@
-# THIS IS AN OPTIONAL STARTER-KIT. USE WHICHEVER LANGUAGES AND FRAMEWORKS MAKES YOUR <3 GO BOOP!
+# We Code 2019 Hackathon APP - by team six "Garden Gift"
 
 # About the App
+We present an amazing way to share your garden gifts with your neighbors!
 
-Here is a quick way to start your hackathon project with a simple node server and React app, ready for your UI enhancements and/or database connections. It's a To Do list, in which you can add a To Do item via the form field, and it will be posted to the Express server.
-
-You can mark a To Do item as done by checking the box next to it.
+## Stack
+* MongoDB
+* Express and Mongoose
+* React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and Esau Silva's article on [How to get create-react-app to work with a Node.js back-end API](https://medium.freecodecamp.org/how-to-make-create-react-app-work-with-a-node-backend-api-7c5c48acb1b0). Silva's article and comments may be a useful resource if you run into trouble, and it contains additional instructions on deploying a similar app to Heroku. This is optional but could be helpful when it's time to submit the project.
 
